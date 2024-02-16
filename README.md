@@ -26,7 +26,7 @@
 
 ## Images
 
-[Tiny swords](https://pixelfrog-assets.itch.io/tiny-swords)
+[Tiny Swords](https://pixelfrog-assets.itch.io/tiny-swords)
 
 # App
 
