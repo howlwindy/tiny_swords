@@ -12,12 +12,21 @@
   <a title="Pub" target="blank" href="https://pub.dev/packages/icons_launcher">
     <img alt="icons_launcher" src="https://img.shields.io/pub/v/icons_launcher?label=icons_launcher&logo=dart" />
   </a>
+  <a title="Pub" target="blank" href="https://pub.dev/packages/flame_splash_screen">
+    <img alt="rename" src="https://img.shields.io/pub/v/flame_splash_screen?label=flame_splash_screen&logo=dart" />
+  </a>
   <a title="Platform" target="blank" href="https://github.com/howlwindy/tiny_swords">
     <img alt="Platform" src="https://img.shields.io/badge/Platform-Android%20|%20iOS%20|%20Linux%20|%20macOS%20|%20Web%20|%20Windows%20-blue.svg?logo=flutter" />
   </a>
 </p>
 
 ---
+
+# Resources
+
+## Images
+
+[Tiny swords](https://pixelfrog-assets.itch.io/tiny-swords)
 
 # App
 
