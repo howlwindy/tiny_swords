@@ -13,7 +13,7 @@ jobs:
         with:
           channel: 'stable'
       - run: flutter pub get
-      - run: flutter build web --base-href /tiny-swords/ --release
+      - run: flutter build web --base-href /tiny_swords/ --release
       - uses: actions/upload-pages-artifact@v2
         with:
           path: build/web
