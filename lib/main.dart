@@ -1,6 +1,7 @@
 import 'package:flame/game.dart';
 import 'package:flame_splash_screen/flame_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:tiny_swords/tiny_swords_game.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -28,6 +29,7 @@ void main() {
     ]),
     onFinish: (BuildContext context) => Navigator.pushReplacement<void, void>(
         context,
-        MaterialPageRoute(builder: (context) => GameWidget(game: FlameGame()))),
+        MaterialPageRoute(
+            builder: (context) => GameWidget(game: TinySwordsGame()))),
   ))));
 }
