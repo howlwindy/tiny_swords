@@ -1,4 +1,5 @@
 import 'package:flame/components.dart';
+import 'package:tiny_swords/gen/assets.gen.dart';
 import 'package:tiny_swords/tiny_swords_game.dart';
 
 class WaterFoam extends SpriteAnimationComponent
@@ -6,7 +7,8 @@ class WaterFoam extends SpriteAnimationComponent
   WaterFoam({required super.position}) : super();
   @override
   void onLoad() {
-    final image = game.images.fromCache('terrain_water_foam.png');
+    final image =
+        game.images.fromCache(Assets.images.game.terrainWaterFoam.keyName);
     animation = SpriteAnimation.fromFrameData(
       image,
       SpriteAnimationData.sequenced(
