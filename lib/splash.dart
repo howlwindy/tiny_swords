@@ -1,6 +1,7 @@
 import 'package:flame/game.dart';
 import 'package:flame_splash_screen/flame_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:tiny_swords/gen/assets.gen.dart';
 import 'package:tiny_swords/tiny_swords_game.dart';
 
 class Splash extends StatelessWidget {
@@ -12,20 +13,20 @@ class Splash extends StatelessWidget {
       theme: FlameSplashTheme.dark,
       showAfter: (BuildContext context) => Stack(children: [
         Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash/background.png'),
+                image: AssetImage(Assets.images.splash.background.keyName),
                 fit: BoxFit.cover),
           ),
         ),
-        const SizedBox.expand(
+        SizedBox.expand(
             child: FractionallySizedBox(
                 widthFactor: .8,
                 heightFactor: .8,
                 child: DecoratedBox(
                     decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/splash/logo.png'),
+                    image: AssetImage(Assets.images.splash.logo.keyName),
                   ),
                 ))))
       ]),

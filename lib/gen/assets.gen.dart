@@ -27,8 +27,12 @@ class $AssetsImagesGameGen {
   AssetGenImage get terrainWaterFoam =>
       const AssetGenImage('assets/images/game/terrain_water_foam.png');
 
+  /// File path: assets/images/game/ui_cursor.png
+  AssetGenImage get uiCursor =>
+      const AssetGenImage('assets/images/game/ui_cursor.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [terrainWater, terrainWaterFoam];
+  List<AssetGenImage> get values => [terrainWater, terrainWaterFoam, uiCursor];
 }
 
 class $AssetsImagesSplashGen {
