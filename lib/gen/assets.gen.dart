@@ -27,6 +27,10 @@ class $AssetsImagesGameGen {
   AssetGenImage get decoRocks1 =>
       const AssetGenImage('assets/images/game/deco_rocks1.png');
 
+  /// File path: assets/images/game/deco_rocks2.png
+  AssetGenImage get decoRocks2 =>
+      const AssetGenImage('assets/images/game/deco_rocks2.png');
+
   /// File path: assets/images/game/terrain_water.png
   AssetGenImage get terrainWater =>
       const AssetGenImage('assets/images/game/terrain_water.png');
@@ -40,8 +44,14 @@ class $AssetsImagesGameGen {
       const AssetGenImage('assets/images/game/ui_cursor.png');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [decoRocks0, decoRocks1, terrainWater, terrainWaterFoam, uiCursor];
+  List<AssetGenImage> get values => [
+        decoRocks0,
+        decoRocks1,
+        decoRocks2,
+        terrainWater,
+        terrainWaterFoam,
+        uiCursor
+      ];
 }
 
 class $AssetsImagesSplashGen {

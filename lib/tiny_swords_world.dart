@@ -1,6 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
+import 'package:tiny_swords/components/deco/rocks2.dart';
 import 'package:tiny_swords/components/terrain/water.dart';
 import 'package:tiny_swords/components/terrain/water_foam.dart';
 import 'package:tiny_swords/components/ui/cursor.dart';
@@ -25,6 +26,10 @@ class TinySwordsWorld extends World with HasGameReference<TinySwordsGame> {
     final rocks1 = Rocks1(
         position: Vector2(baseX + waterfoam.size.x + rocks0.size.x, baseY));
     add(rocks1);
+    final rocks2 = Rocks2(
+        position: Vector2(
+            baseX + waterfoam.size.x + rocks0.size.x + rocks1.size.x, baseY));
+    add(rocks2);
     add(cursor);
   }
 }
