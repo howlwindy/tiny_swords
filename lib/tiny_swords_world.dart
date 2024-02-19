@@ -1,4 +1,5 @@
 import 'package:flame/components.dart';
+import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/terrain/water.dart';
 import 'package:tiny_swords/components/terrain/water_foam.dart';
 import 'package:tiny_swords/components/ui/cursor.dart';
@@ -12,7 +13,14 @@ class TinySwordsWorld extends World with HasGameReference<TinySwordsGame> {
   Future<void> onLoad() async {
     // add components
     add(Water());
-    add(WaterFoam(position: Vector2(-game.size.x / 2, -game.size.y / 2)));
+
+    // TODO: The components added below are just temporary and without logic.
+    final baseX = -game.size.x / 2;
+    final baseY = -game.size.y / 2;
+    final waterfoam = WaterFoam(position: Vector2(baseX, baseY));
+    add(waterfoam);
+    final rocks0 = Rocks0(position: Vector2(baseX + waterfoam.size.x, baseY));
+    add(rocks0);
     add(cursor);
   }
 }
