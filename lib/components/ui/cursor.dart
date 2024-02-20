@@ -1,9 +1,8 @@
 import 'package:flame/components.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
-import 'package:tiny_swords/tiny_swords_game.dart';
 
-class Cursor extends SpriteComponent with HasGameReference<TinySwordsGame> {
-  Cursor() : super(size: Vector2.all(36), anchor: Anchor.center);
+class Cursor extends SpriteComponent with HasGameRef {
+  Cursor() : super(size: Vector2.all(36));
 
   @override
   Future<void> onLoad() async {
