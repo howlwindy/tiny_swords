@@ -39,6 +39,10 @@ class $AssetsImagesGameGen {
   AssetGenImage get effectExplosion =>
       const AssetGenImage('assets/images/game/effect_explosion.png');
 
+  /// File path: assets/images/game/effect_fire.png
+  AssetGenImage get effectFire =>
+      const AssetGenImage('assets/images/game/effect_fire.png');
+
   /// File path: assets/images/game/terrain_water.png
   AssetGenImage get terrainWater =>
       const AssetGenImage('assets/images/game/terrain_water.png');
@@ -58,6 +62,7 @@ class $AssetsImagesGameGen {
         decoRocks2,
         decoRocks3,
         effectExplosion,
+        effectFire,
         terrainWater,
         terrainWaterFoam,
         uiCursor

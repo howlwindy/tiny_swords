@@ -5,6 +5,7 @@ import 'package:tiny_swords/components/deco/rocks1.dart';
 import 'package:tiny_swords/components/deco/rocks2.dart';
 import 'package:tiny_swords/components/deco/rocks3.dart';
 import 'package:tiny_swords/effects/explosion.dart';
+import 'package:tiny_swords/effects/fire.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
 import 'package:tiny_swords/states.dart';
 import 'package:tiny_swords/tiny_swords_game.dart';
@@ -41,6 +42,9 @@ class Water extends SpriteComponent with HasGameRef {
     final explosion =
         Explosion(position: rocks0.position + Vector2(rocks0.size.x, 0));
     add(explosion);
+    final fire =
+        Fire(position: explosion.position + Vector2(explosion.size.x, 0));
+    add(fire);
   }
 
   @override
