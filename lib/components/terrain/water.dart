@@ -4,6 +4,7 @@ import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
 import 'package:tiny_swords/components/deco/rocks2.dart';
 import 'package:tiny_swords/components/deco/rocks3.dart';
+import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
 import 'package:tiny_swords/states.dart';
 import 'package:tiny_swords/tiny_swords_game.dart';
@@ -26,17 +27,20 @@ class Water extends SpriteComponent with HasGameRef {
     sprite = Sprite(image);
     setSize();
     setPosition();
-    final rock0 = Rocks0(position: Vector2(0, 0));
-    add(rock0);
-    final rock1 = Rocks1(position: Vector2(size.x, 0));
-    rock1.anchor = Anchor.topRight;
-    add(rock1);
-    final rock2 = Rocks2(position: Vector2(0, size.y));
-    rock2.anchor = Anchor.bottomLeft;
-    add(rock2);
-    final rock3 = Rocks3(position: size);
-    rock3.anchor = Anchor.bottomRight;
-    add(rock3);
+    final rocks0 = Rocks0(position: Vector2(0, 0));
+    add(rocks0);
+    final rocks1 = Rocks1(position: Vector2(size.x, 0));
+    rocks1.anchor = Anchor.topRight;
+    add(rocks1);
+    final rocks2 = Rocks2(position: Vector2(0, size.y));
+    rocks2.anchor = Anchor.bottomLeft;
+    add(rocks2);
+    final rocks3 = Rocks3(position: size);
+    rocks3.anchor = Anchor.bottomRight;
+    add(rocks3);
+    final explosion =
+        Explosion(position: rocks0.position + Vector2(rocks0.size.x, 0));
+    add(explosion);
   }
 
   @override
