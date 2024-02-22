@@ -1,17 +1,16 @@
 import 'package:flame/components.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
 
-class Rocks0 extends SpriteAnimationComponent with HasGameRef {
-  Rocks0({required super.position}) : super();
+class Buried extends SpriteAnimationComponent with HasGameRef {
+  Buried({required super.position}) : super();
   @override
   void onLoad() {
-    final image =
-        game.images.fromCache(Assets.images.game.decoWaterRock0.keyName);
+    final image = game.images.fromCache(Assets.images.game.decoBuried.keyName);
     animation = SpriteAnimation.fromFrameData(
       image,
       SpriteAnimationData.sequenced(
-        amount: 8,
-        textureSize: Vector2.all(32),
+        amount: 7,
+        textureSize: Vector2(47, 49),
         stepTime: 0.1,
       ),
     );

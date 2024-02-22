@@ -5,7 +5,8 @@ class Rocks2 extends SpriteAnimationComponent with HasGameRef {
   Rocks2({required super.position}) : super();
   @override
   void onLoad() {
-    final image = game.images.fromCache(Assets.images.game.decoRocks2.keyName);
+    final image =
+        game.images.fromCache(Assets.images.game.decoWaterRock2.keyName);
     animation = SpriteAnimation.fromFrameData(
       image,
       SpriteAnimationData.sequenced(

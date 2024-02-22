@@ -19,21 +19,25 @@ class $AssetsImagesGen {
 class $AssetsImagesGameGen {
   const $AssetsImagesGameGen();
 
-  /// File path: assets/images/game/deco_rocks0.png
-  AssetGenImage get decoRocks0 =>
-      const AssetGenImage('assets/images/game/deco_rocks0.png');
+  /// File path: assets/images/game/deco_buried.png
+  AssetGenImage get decoBuried =>
+      const AssetGenImage('assets/images/game/deco_buried.png');
 
-  /// File path: assets/images/game/deco_rocks1.png
-  AssetGenImage get decoRocks1 =>
-      const AssetGenImage('assets/images/game/deco_rocks1.png');
+  /// File path: assets/images/game/deco_water_rock0.png
+  AssetGenImage get decoWaterRock0 =>
+      const AssetGenImage('assets/images/game/deco_water_rock0.png');
 
-  /// File path: assets/images/game/deco_rocks2.png
-  AssetGenImage get decoRocks2 =>
-      const AssetGenImage('assets/images/game/deco_rocks2.png');
+  /// File path: assets/images/game/deco_water_rock1.png
+  AssetGenImage get decoWaterRock1 =>
+      const AssetGenImage('assets/images/game/deco_water_rock1.png');
 
-  /// File path: assets/images/game/deco_rocks3.png
-  AssetGenImage get decoRocks3 =>
-      const AssetGenImage('assets/images/game/deco_rocks3.png');
+  /// File path: assets/images/game/deco_water_rock2.png
+  AssetGenImage get decoWaterRock2 =>
+      const AssetGenImage('assets/images/game/deco_water_rock2.png');
+
+  /// File path: assets/images/game/deco_water_rock3.png
+  AssetGenImage get decoWaterRock3 =>
+      const AssetGenImage('assets/images/game/deco_water_rock3.png');
 
   /// File path: assets/images/game/effect_explosion.png
   AssetGenImage get effectExplosion =>
@@ -57,10 +61,11 @@ class $AssetsImagesGameGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        decoRocks0,
-        decoRocks1,
-        decoRocks2,
-        decoRocks3,
+        decoBuried,
+        decoWaterRock0,
+        decoWaterRock1,
+        decoWaterRock2,
+        decoWaterRock3,
         effectExplosion,
         effectFire,
         terrainWater,
