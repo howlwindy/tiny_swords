@@ -1,6 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:flutter/foundation.dart';
 import 'package:tiny_swords/components/deco/buried.dart';
+import 'package:tiny_swords/components/deco/dead.dart';
 import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
 import 'package:tiny_swords/components/deco/rocks2.dart';
@@ -48,6 +49,8 @@ class Water extends SpriteComponent with HasGameRef {
     add(fire);
     final buried = Buried(position: fire.position + Vector2(fire.size.x, 0));
     add(buried);
+    final dead = Dead(position: buried.position + Vector2(buried.size.x, 0));
+    add(dead);
   }
 
   @override

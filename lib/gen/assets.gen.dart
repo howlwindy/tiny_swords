@@ -23,6 +23,10 @@ class $AssetsImagesGameGen {
   AssetGenImage get decoBuried =>
       const AssetGenImage('assets/images/game/deco_buried.png');
 
+  /// File path: assets/images/game/deco_dead.png
+  AssetGenImage get decoDead =>
+      const AssetGenImage('assets/images/game/deco_dead.png');
+
   /// File path: assets/images/game/deco_water_rock0.png
   AssetGenImage get decoWaterRock0 =>
       const AssetGenImage('assets/images/game/deco_water_rock0.png');
@@ -62,6 +66,7 @@ class $AssetsImagesGameGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         decoBuried,
+        decoDead,
         decoWaterRock0,
         decoWaterRock1,
         decoWaterRock2,
