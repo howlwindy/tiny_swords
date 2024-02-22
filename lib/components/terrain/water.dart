@@ -1,6 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:flutter/foundation.dart';
 import 'package:tiny_swords/components/deco/buried.dart';
+import 'package:tiny_swords/components/deco/cloud.dart';
 import 'package:tiny_swords/components/deco/dead.dart';
 import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
@@ -9,6 +10,7 @@ import 'package:tiny_swords/components/deco/rocks3.dart';
 import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/effects/fire.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
+import 'package:tiny_swords/groups.dart';
 import 'package:tiny_swords/states.dart';
 import 'package:tiny_swords/tiny_swords_game.dart';
 
@@ -51,6 +53,18 @@ class Water extends SpriteComponent with HasGameRef {
     add(buried);
     final dead = Dead(position: buried.position + Vector2(buried.size.x, 0));
     add(dead);
+    List<Cloud> clouds = [];
+    for (var i = 0; i < cloudGroup.length; i++) {
+      clouds.add(Cloud(i,
+          position: i == 0
+              ? Vector2(
+                  0,
+                  explosion.size.y,
+                )
+              : Vector2(clouds[i - 1].position.x + clouds[i - 1].size.x,
+                  clouds[i - 1].y)));
+      add(clouds[i]);
+    }
   }
 
   @override

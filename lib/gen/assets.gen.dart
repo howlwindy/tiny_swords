@@ -23,6 +23,50 @@ class $AssetsImagesGameGen {
   AssetGenImage get decoBuried =>
       const AssetGenImage('assets/images/game/deco_buried.png');
 
+  /// File path: assets/images/game/deco_cloud0.png
+  AssetGenImage get decoCloud0 =>
+      const AssetGenImage('assets/images/game/deco_cloud0.png');
+
+  /// File path: assets/images/game/deco_cloud1.png
+  AssetGenImage get decoCloud1 =>
+      const AssetGenImage('assets/images/game/deco_cloud1.png');
+
+  /// File path: assets/images/game/deco_cloud10.png
+  AssetGenImage get decoCloud10 =>
+      const AssetGenImage('assets/images/game/deco_cloud10.png');
+
+  /// File path: assets/images/game/deco_cloud2.png
+  AssetGenImage get decoCloud2 =>
+      const AssetGenImage('assets/images/game/deco_cloud2.png');
+
+  /// File path: assets/images/game/deco_cloud3.png
+  AssetGenImage get decoCloud3 =>
+      const AssetGenImage('assets/images/game/deco_cloud3.png');
+
+  /// File path: assets/images/game/deco_cloud4.png
+  AssetGenImage get decoCloud4 =>
+      const AssetGenImage('assets/images/game/deco_cloud4.png');
+
+  /// File path: assets/images/game/deco_cloud5.png
+  AssetGenImage get decoCloud5 =>
+      const AssetGenImage('assets/images/game/deco_cloud5.png');
+
+  /// File path: assets/images/game/deco_cloud6.png
+  AssetGenImage get decoCloud6 =>
+      const AssetGenImage('assets/images/game/deco_cloud6.png');
+
+  /// File path: assets/images/game/deco_cloud7.png
+  AssetGenImage get decoCloud7 =>
+      const AssetGenImage('assets/images/game/deco_cloud7.png');
+
+  /// File path: assets/images/game/deco_cloud8.png
+  AssetGenImage get decoCloud8 =>
+      const AssetGenImage('assets/images/game/deco_cloud8.png');
+
+  /// File path: assets/images/game/deco_cloud9.png
+  AssetGenImage get decoCloud9 =>
+      const AssetGenImage('assets/images/game/deco_cloud9.png');
+
   /// File path: assets/images/game/deco_dead.png
   AssetGenImage get decoDead =>
       const AssetGenImage('assets/images/game/deco_dead.png');
@@ -66,6 +110,17 @@ class $AssetsImagesGameGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         decoBuried,
+        decoCloud0,
+        decoCloud1,
+        decoCloud10,
+        decoCloud2,
+        decoCloud3,
+        decoCloud4,
+        decoCloud5,
+        decoCloud6,
+        decoCloud7,
+        decoCloud8,
+        decoCloud9,
         decoDead,
         decoWaterRock0,
         decoWaterRock1,
