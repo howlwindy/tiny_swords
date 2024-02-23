@@ -6,6 +6,7 @@ import 'package:tiny_swords/components/deco/castus.dart';
 import 'package:tiny_swords/components/deco/cloud.dart';
 import 'package:tiny_swords/components/deco/dead.dart';
 import 'package:tiny_swords/components/deco/dynamite.dart';
+import 'package:tiny_swords/components/deco/grass.dart';
 import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
 import 'package:tiny_swords/components/deco/rocks2.dart';
@@ -81,6 +82,17 @@ class Water extends SpriteComponent with HasGameRef {
               : Vector2(
                   castuses[i - 1].position.x + castuses[i - 1].size.x, 0)));
       add(castuses[i]);
+    }
+    List<Grass> grasses = [];
+    for (var i = 0; i < grassGroup.length; i++) {
+      grasses.add(Grass(i,
+          position: i == 0
+              ? Vector2(
+                  castuses.last.position.x + castuses.last.size.x,
+                  0,
+                )
+              : Vector2(grasses[i - 1].position.x + grasses[i - 1].size.x, 0)));
+      add(grasses[i]);
     }
     List<Cloud> clouds = [];
     for (var i = 0; i < cloudGroup.length; i++) {

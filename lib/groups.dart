@@ -23,3 +23,9 @@ final List<String> castusGroup = [
   Assets.images.game.decoCastus0.keyName,
   Assets.images.game.decoCastus1.keyName,
 ];
+
+final List<String> grassGroup = [
+  Assets.images.game.decoGrass0.keyName,
+  Assets.images.game.decoGrass1.keyName,
+  Assets.images.game.decoGrass2.keyName,
+];

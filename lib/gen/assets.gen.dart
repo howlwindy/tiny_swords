@@ -91,6 +91,18 @@ class $AssetsImagesGameGen {
   AssetGenImage get decoDynamite =>
       const AssetGenImage('assets/images/game/deco_dynamite.png');
 
+  /// File path: assets/images/game/deco_grass0.png
+  AssetGenImage get decoGrass0 =>
+      const AssetGenImage('assets/images/game/deco_grass0.png');
+
+  /// File path: assets/images/game/deco_grass1.png
+  AssetGenImage get decoGrass1 =>
+      const AssetGenImage('assets/images/game/deco_grass1.png');
+
+  /// File path: assets/images/game/deco_grass2.png
+  AssetGenImage get decoGrass2 =>
+      const AssetGenImage('assets/images/game/deco_grass2.png');
+
   /// File path: assets/images/game/deco_water_rock0.png
   AssetGenImage get decoWaterRock0 =>
       const AssetGenImage('assets/images/game/deco_water_rock0.png');
@@ -147,6 +159,9 @@ class $AssetsImagesGameGen {
         decoCloud9,
         decoDead,
         decoDynamite,
+        decoGrass0,
+        decoGrass1,
+        decoGrass2,
         decoWaterRock0,
         decoWaterRock1,
         decoWaterRock2,
