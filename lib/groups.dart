@@ -35,3 +35,9 @@ final List<String> groundRockGroup = [
   Assets.images.game.decoGroundRock1.keyName,
   Assets.images.game.decoGroundRock2.keyName,
 ];
+
+final List<String> mushroomGroup = [
+  Assets.images.game.decoMushroom0.keyName,
+  Assets.images.game.decoMushroom1.keyName,
+  Assets.images.game.decoMushroom2.keyName,
+];

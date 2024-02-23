@@ -8,6 +8,7 @@ import 'package:tiny_swords/components/deco/dead.dart';
 import 'package:tiny_swords/components/deco/dynamite.dart';
 import 'package:tiny_swords/components/deco/grass.dart';
 import 'package:tiny_swords/components/deco/ground_rock.dart';
+import 'package:tiny_swords/components/deco/mushroom.dart';
 import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
 import 'package:tiny_swords/components/deco/rocks2.dart';
@@ -107,6 +108,18 @@ class Water extends SpriteComponent with HasGameRef {
                   groundRocks[i - 1].position.x + groundRocks[i - 1].size.x,
                   0)));
       add(groundRocks[i]);
+    }
+    List<Mushroom> mushrooms = [];
+    for (var i = 0; i < grassGroup.length; i++) {
+      mushrooms.add(Mushroom(i,
+          position: i == 0
+              ? Vector2(
+                  groundRocks.last.position.x + groundRocks.last.size.x,
+                  0,
+                )
+              : Vector2(
+                  mushrooms[i - 1].position.x + mushrooms[i - 1].size.x, 0)));
+      add(mushrooms[i]);
     }
     List<Cloud> clouds = [];
     for (var i = 0; i < cloudGroup.length; i++) {
