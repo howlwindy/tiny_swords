@@ -10,11 +10,8 @@ import 'package:tiny_swords/components/deco/grass.dart';
 import 'package:tiny_swords/components/deco/ground_rock.dart';
 import 'package:tiny_swords/components/deco/mushroom.dart';
 import 'package:tiny_swords/components/deco/pumpkin.dart';
-import 'package:tiny_swords/components/deco/rocks0.dart';
-import 'package:tiny_swords/components/deco/rocks1.dart';
-import 'package:tiny_swords/components/deco/rocks2.dart';
-import 'package:tiny_swords/components/deco/rocks3.dart';
 import 'package:tiny_swords/components/deco/scarecrow.dart';
+import 'package:tiny_swords/components/deco/water_rock.dart';
 import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/effects/fire.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
@@ -40,19 +37,21 @@ class Water extends SpriteComponent with HasGameRef {
     sprite = Sprite(image);
     setSize();
     setPosition();
-    final rocks0 = Rocks0(position: Vector2(0, 0));
-    add(rocks0);
-    final rocks1 = Rocks1(position: Vector2(size.x, 0));
-    rocks1.anchor = Anchor.topRight;
-    add(rocks1);
-    final rocks2 = Rocks2(position: Vector2(0, size.y));
-    rocks2.anchor = Anchor.bottomLeft;
-    add(rocks2);
-    final rocks3 = Rocks3(position: size);
-    rocks3.anchor = Anchor.bottomRight;
-    add(rocks3);
-    final explosion =
-        Explosion(position: rocks0.position + Vector2(rocks0.size.x, 0));
+    List<WaterRock> waterRocks = [];
+    for (var i = 0; i < WaterRock.images.length; i++) {
+      waterRocks.add(WaterRock(i,
+          position: i == 0
+              ? Vector2(
+                  0,
+                  0,
+                )
+              : Vector2(
+                  waterRocks[i - 1].position.x + waterRocks[i - 1].size.x, 0)));
+      add(waterRocks[i]);
+    }
+    final explosion = Explosion(
+        position:
+            waterRocks.last.position + Vector2(waterRocks.last.size.x, 0));
     add(explosion);
     final fire =
         Fire(position: explosion.position + Vector2(explosion.size.x, 0));
@@ -65,7 +64,7 @@ class Water extends SpriteComponent with HasGameRef {
         Dynamite(position: dead.position + Vector2(dead.size.x, 0));
     add(dynamite);
     List<Bone> bones = [];
-    for (var i = 0; i < boneGroup.length; i++) {
+    for (var i = 0; i < Bone.images.length; i++) {
       bones.add(Bone(i,
           position: i == 0
               ? Vector2(
@@ -76,7 +75,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(bones[i]);
     }
     List<Castus> castuses = [];
-    for (var i = 0; i < castusGroup.length; i++) {
+    for (var i = 0; i < Castus.images.length; i++) {
       castuses.add(Castus(i,
           position: i == 0
               ? Vector2(
@@ -88,7 +87,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(castuses[i]);
     }
     List<Grass> grasses = [];
-    for (var i = 0; i < grassGroup.length; i++) {
+    for (var i = 0; i < Grass.images.length; i++) {
       grasses.add(Grass(i,
           position: i == 0
               ? Vector2(
@@ -99,7 +98,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(grasses[i]);
     }
     List<GroundRock> groundRocks = [];
-    for (var i = 0; i < groundRockGroup.length; i++) {
+    for (var i = 0; i < GroundRock.images.length; i++) {
       groundRocks.add(GroundRock(i,
           position: i == 0
               ? Vector2(
@@ -112,7 +111,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(groundRocks[i]);
     }
     List<Mushroom> mushrooms = [];
-    for (var i = 0; i < mushroomGroup.length; i++) {
+    for (var i = 0; i < Mushroom.images.length; i++) {
       mushrooms.add(Mushroom(i,
           position: i == 0
               ? Vector2(
@@ -124,7 +123,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(mushrooms[i]);
     }
     List<Pumpkin> pumpkins = [];
-    for (var i = 0; i < pumpkinGroup.length; i++) {
+    for (var i = 0; i < Pumpkin.images.length; i++) {
       pumpkins.add(Pumpkin(i,
           position: i == 0
               ? Vector2(
@@ -136,7 +135,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(pumpkins[i]);
     }
     List<Scarecrow> scarecrows = [];
-    for (var i = 0; i < scarecrowGroup.length; i++) {
+    for (var i = 0; i < Scarecrow.images.length; i++) {
       scarecrows.add(Scarecrow(i,
           position: i == 0
               ? Vector2(
@@ -148,7 +147,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(scarecrows[i]);
     }
     List<Cloud> clouds = [];
-    for (var i = 0; i < cloudGroup.length; i++) {
+    for (var i = 0; i < Cloud.images.length; i++) {
       clouds.add(Cloud(i,
           position: i == 0
               ? Vector2(
