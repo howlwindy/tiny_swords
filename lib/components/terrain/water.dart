@@ -2,6 +2,7 @@ import 'package:flame/components.dart';
 import 'package:flutter/foundation.dart';
 import 'package:tiny_swords/components/deco/bone.dart';
 import 'package:tiny_swords/components/deco/buried.dart';
+import 'package:tiny_swords/components/deco/castus.dart';
 import 'package:tiny_swords/components/deco/cloud.dart';
 import 'package:tiny_swords/components/deco/dead.dart';
 import 'package:tiny_swords/components/deco/dynamite.dart';
@@ -68,6 +69,18 @@ class Water extends SpriteComponent with HasGameRef {
                 )
               : Vector2(bones[i - 1].position.x + bones[i - 1].size.x, 0)));
       add(bones[i]);
+    }
+    List<Castus> castuses = [];
+    for (var i = 0; i < castusGroup.length; i++) {
+      castuses.add(Castus(i,
+          position: i == 0
+              ? Vector2(
+                  bones.last.position.x + bones.last.size.x,
+                  0,
+                )
+              : Vector2(
+                  castuses[i - 1].position.x + castuses[i - 1].size.x, 0)));
+      add(castuses[i]);
     }
     List<Cloud> clouds = [];
     for (var i = 0; i < cloudGroup.length; i++) {

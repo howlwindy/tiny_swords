@@ -31,6 +31,14 @@ class $AssetsImagesGameGen {
   AssetGenImage get decoBuried =>
       const AssetGenImage('assets/images/game/deco_buried.png');
 
+  /// File path: assets/images/game/deco_castus0.png
+  AssetGenImage get decoCastus0 =>
+      const AssetGenImage('assets/images/game/deco_castus0.png');
+
+  /// File path: assets/images/game/deco_castus1.png
+  AssetGenImage get decoCastus1 =>
+      const AssetGenImage('assets/images/game/deco_castus1.png');
+
   /// File path: assets/images/game/deco_cloud0.png
   AssetGenImage get decoCloud0 =>
       const AssetGenImage('assets/images/game/deco_cloud0.png');
@@ -124,6 +132,8 @@ class $AssetsImagesGameGen {
         decoBone0,
         decoBone1,
         decoBuried,
+        decoCastus0,
+        decoCastus1,
         decoCloud0,
         decoCloud1,
         decoCloud10,

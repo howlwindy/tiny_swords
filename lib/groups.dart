@@ -18,3 +18,8 @@ final List<String> boneGroup = [
   Assets.images.game.decoBone0.keyName,
   Assets.images.game.decoBone1.keyName,
 ];
+
+final List<String> castusGroup = [
+  Assets.images.game.decoCastus0.keyName,
+  Assets.images.game.decoCastus1.keyName,
+];
