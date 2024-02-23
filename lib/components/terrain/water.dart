@@ -14,6 +14,7 @@ import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
 import 'package:tiny_swords/components/deco/rocks2.dart';
 import 'package:tiny_swords/components/deco/rocks3.dart';
+import 'package:tiny_swords/components/deco/scarecrow.dart';
 import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/effects/fire.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
@@ -133,6 +134,18 @@ class Water extends SpriteComponent with HasGameRef {
               : Vector2(
                   pumpkins[i - 1].position.x + pumpkins[i - 1].size.x, 0)));
       add(pumpkins[i]);
+    }
+    List<Scarecrow> scarecrows = [];
+    for (var i = 0; i < scarecrowGroup.length; i++) {
+      scarecrows.add(Scarecrow(i,
+          position: i == 0
+              ? Vector2(
+                  pumpkins.last.position.x + pumpkins.last.size.x,
+                  0,
+                )
+              : Vector2(
+                  scarecrows[i - 1].position.x + scarecrows[i - 1].size.x, 0)));
+      add(scarecrows[i]);
     }
     List<Cloud> clouds = [];
     for (var i = 0; i < cloudGroup.length; i++) {
