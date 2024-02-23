@@ -15,6 +15,7 @@ class Cloud extends SpriteComponent with HasGameRef {
     Assets.images.game.decoCloud9.keyName,
     Assets.images.game.decoCloud10.keyName,
   ];
+
   final int index;
 
   Cloud(this.index, {required super.position}) : super();

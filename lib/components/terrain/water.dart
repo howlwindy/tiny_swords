@@ -1,5 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flutter/foundation.dart';
+import 'package:tiny_swords/components/deco/arrow.dart';
 import 'package:tiny_swords/components/deco/bone.dart';
 import 'package:tiny_swords/components/deco/buried.dart';
 import 'package:tiny_swords/components/deco/castus.dart';
@@ -15,7 +16,6 @@ import 'package:tiny_swords/components/deco/water_rock.dart';
 import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/effects/fire.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
-import 'package:tiny_swords/groups.dart';
 import 'package:tiny_swords/states.dart';
 import 'package:tiny_swords/tiny_swords_game.dart';
 
@@ -146,6 +146,14 @@ class Water extends SpriteComponent with HasGameRef {
                   scarecrows[i - 1].position.x + scarecrows[i - 1].size.x, 0)));
       add(scarecrows[i]);
     }
+    final arrow = Arrow(
+        position:
+            Vector2(scarecrows.last.position.x + scarecrows.last.size.x, 0));
+    add(arrow);
+    final arrowEmbedded =
+        Arrow(position: Vector2(arrow.position.x + arrow.size.x, 0));
+    add(arrowEmbedded);
+    arrowEmbedded.toEmbedded();
     List<Cloud> clouds = [];
     for (var i = 0; i < Cloud.images.length; i++) {
       clouds.add(Cloud(i,
