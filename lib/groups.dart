@@ -41,3 +41,8 @@ final List<String> mushroomGroup = [
   Assets.images.game.decoMushroom1.keyName,
   Assets.images.game.decoMushroom2.keyName,
 ];
+
+final List<String> pumpkinGroup = [
+  Assets.images.game.decoPumpkin0.keyName,
+  Assets.images.game.decoPumpkin1.keyName,
+];

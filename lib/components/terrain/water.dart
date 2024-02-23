@@ -9,6 +9,7 @@ import 'package:tiny_swords/components/deco/dynamite.dart';
 import 'package:tiny_swords/components/deco/grass.dart';
 import 'package:tiny_swords/components/deco/ground_rock.dart';
 import 'package:tiny_swords/components/deco/mushroom.dart';
+import 'package:tiny_swords/components/deco/pumpkin.dart';
 import 'package:tiny_swords/components/deco/rocks0.dart';
 import 'package:tiny_swords/components/deco/rocks1.dart';
 import 'package:tiny_swords/components/deco/rocks2.dart';
@@ -97,7 +98,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(grasses[i]);
     }
     List<GroundRock> groundRocks = [];
-    for (var i = 0; i < grassGroup.length; i++) {
+    for (var i = 0; i < groundRockGroup.length; i++) {
       groundRocks.add(GroundRock(i,
           position: i == 0
               ? Vector2(
@@ -110,7 +111,7 @@ class Water extends SpriteComponent with HasGameRef {
       add(groundRocks[i]);
     }
     List<Mushroom> mushrooms = [];
-    for (var i = 0; i < grassGroup.length; i++) {
+    for (var i = 0; i < mushroomGroup.length; i++) {
       mushrooms.add(Mushroom(i,
           position: i == 0
               ? Vector2(
@@ -120,6 +121,18 @@ class Water extends SpriteComponent with HasGameRef {
               : Vector2(
                   mushrooms[i - 1].position.x + mushrooms[i - 1].size.x, 0)));
       add(mushrooms[i]);
+    }
+    List<Pumpkin> pumpkins = [];
+    for (var i = 0; i < pumpkinGroup.length; i++) {
+      pumpkins.add(Pumpkin(i,
+          position: i == 0
+              ? Vector2(
+                  mushrooms.last.position.x + mushrooms.last.size.x,
+                  0,
+                )
+              : Vector2(
+                  pumpkins[i - 1].position.x + pumpkins[i - 1].size.x, 0)));
+      add(pumpkins[i]);
     }
     List<Cloud> clouds = [];
     for (var i = 0; i < cloudGroup.length; i++) {
