@@ -13,3 +13,8 @@ final List<String> cloudGroup = [
   Assets.images.game.decoCloud9.keyName,
   Assets.images.game.decoCloud10.keyName,
 ];
+
+final List<String> boneGroup = [
+  Assets.images.game.decoBone0.keyName,
+  Assets.images.game.decoBone1.keyName,
+];
