@@ -29,3 +29,9 @@ final List<String> grassGroup = [
   Assets.images.game.decoGrass1.keyName,
   Assets.images.game.decoGrass2.keyName,
 ];
+
+final List<String> groundRockGroup = [
+  Assets.images.game.decoGroundRock0.keyName,
+  Assets.images.game.decoGroundRock1.keyName,
+  Assets.images.game.decoGroundRock2.keyName,
+];
