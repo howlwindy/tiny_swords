@@ -183,6 +183,14 @@ class $AssetsImagesGameGen {
   AssetGenImage get terrainBeach =>
       const AssetGenImage('assets/images/game/terrain_beach.png');
 
+  /// File path: assets/images/game/terrain_bridge_horizontal.png
+  AssetGenImage get terrainBridgeHorizontal =>
+      const AssetGenImage('assets/images/game/terrain_bridge_horizontal.png');
+
+  /// File path: assets/images/game/terrain_bridge_shadow_horizontal.png
+  AssetGenImage get terrainBridgeShadowHorizontal => const AssetGenImage(
+      'assets/images/game/terrain_bridge_shadow_horizontal.png');
+
   /// File path: assets/images/game/terrain_elevation.png
   AssetGenImage get terrainElevation =>
       const AssetGenImage('assets/images/game/terrain_elevation.png');
@@ -250,6 +258,8 @@ class $AssetsImagesGameGen {
         effectExplosion,
         effectFire,
         terrainBeach,
+        terrainBridgeHorizontal,
+        terrainBridgeShadowHorizontal,
         terrainElevation,
         terrainGrassland,
         terrainGroundShadow,
