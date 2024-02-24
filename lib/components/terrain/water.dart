@@ -14,6 +14,7 @@ import 'package:tiny_swords/components/deco/pumpkin.dart';
 import 'package:tiny_swords/components/deco/scarecrow.dart';
 import 'package:tiny_swords/components/deco/water_rock.dart';
 import 'package:tiny_swords/components/terrain/beach.dart';
+import 'package:tiny_swords/components/terrain/beach_deco.dart';
 import 'package:tiny_swords/components/terrain/bridge_horizontal.dart';
 import 'package:tiny_swords/components/terrain/bridge_shadow_horizontal.dart';
 import 'package:tiny_swords/components/terrain/bridge_shadow_vertical.dart';
@@ -221,6 +222,10 @@ class Water extends SpriteComponent with HasGameRef {
         position:
             Vector2(steps.position.x + steps.size.x, waterFoam.position.y));
     add(grasslandDeco);
+    final beachDeco = BeachDeco(
+        position: Vector2(grasslandDeco.position.x + grasslandDeco.size.x,
+            waterFoam.position.y));
+    add(beachDeco);
   }
 
   @override
