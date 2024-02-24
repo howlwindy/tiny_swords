@@ -16,6 +16,8 @@ import 'package:tiny_swords/components/deco/water_rock.dart';
 import 'package:tiny_swords/components/terrain/beach.dart';
 import 'package:tiny_swords/components/terrain/bridge_horizontal.dart';
 import 'package:tiny_swords/components/terrain/bridge_shadow_horizontal.dart';
+import 'package:tiny_swords/components/terrain/bridge_shadow_vertical.dart';
+import 'package:tiny_swords/components/terrain/bridge_vertical.dart';
 import 'package:tiny_swords/components/terrain/elevation.dart';
 import 'package:tiny_swords/components/terrain/grassland.dart';
 import 'package:tiny_swords/components/terrain/ground_shadow.dart';
@@ -195,11 +197,20 @@ class Water extends SpriteComponent with HasGameRef {
         position: Vector2(groundShadow.position.x + groundShadow.size.x,
             waterFoam.position.y));
     add(bridgeShadowHorizontal);
-    final bridgeHorizontal = BridgeHorizontal(
+    final bridgeShadowVertical = BridgeShadowVertical(
         position: Vector2(
             bridgeShadowHorizontal.position.x + bridgeShadowHorizontal.size.x,
             waterFoam.position.y));
+    add(bridgeShadowVertical);
+    final bridgeHorizontal = BridgeHorizontal(
+        position: Vector2(
+            bridgeShadowVertical.position.x + bridgeShadowVertical.size.x,
+            waterFoam.position.y));
     add(bridgeHorizontal);
+    final bridgeVertical = BridgeVertical(
+        position: Vector2(bridgeHorizontal.position.x + bridgeHorizontal.size.x,
+            waterFoam.position.y));
+    add(bridgeVertical);
   }
 
   @override
