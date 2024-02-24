@@ -14,6 +14,7 @@ import 'package:tiny_swords/components/deco/pumpkin.dart';
 import 'package:tiny_swords/components/deco/scarecrow.dart';
 import 'package:tiny_swords/components/deco/water_rock.dart';
 import 'package:tiny_swords/components/terrain/beach.dart';
+import 'package:tiny_swords/components/terrain/elevation.dart';
 import 'package:tiny_swords/components/terrain/water_foam.dart';
 import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/effects/fire.dart';
@@ -174,6 +175,10 @@ class Water extends SpriteComponent with HasGameRef {
     final beach =
         Beach(position: Vector2(waterFoam.size.x, waterFoam.position.y));
     add(beach);
+    final elevation = Elevation(
+        position:
+            Vector2(beach.position.x + beach.size.x, waterFoam.position.y));
+    add(elevation);
   }
 
   @override
