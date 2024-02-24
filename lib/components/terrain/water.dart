@@ -16,6 +16,7 @@ import 'package:tiny_swords/components/deco/water_rock.dart';
 import 'package:tiny_swords/components/terrain/beach.dart';
 import 'package:tiny_swords/components/terrain/elevation.dart';
 import 'package:tiny_swords/components/terrain/grassland.dart';
+import 'package:tiny_swords/components/terrain/ground_shadow.dart';
 import 'package:tiny_swords/components/terrain/water_foam.dart';
 import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/effects/fire.dart';
@@ -184,6 +185,10 @@ class Water extends SpriteComponent with HasGameRef {
         position: Vector2(
             elevation.position.x + elevation.size.x, waterFoam.position.y));
     add(grassland);
+    final groundShadow = GroundShadow(
+        position: Vector2(
+            grassland.position.x + grassland.size.x, waterFoam.position.y));
+    add(groundShadow);
   }
 
   @override

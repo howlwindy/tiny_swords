@@ -191,6 +191,10 @@ class $AssetsImagesGameGen {
   AssetGenImage get terrainGrassland =>
       const AssetGenImage('assets/images/game/terrain_grassland.png');
 
+  /// File path: assets/images/game/terrain_ground_shadow.png
+  AssetGenImage get terrainGroundShadow =>
+      const AssetGenImage('assets/images/game/terrain_ground_shadow.png');
+
   /// File path: assets/images/game/terrain_water.png
   AssetGenImage get terrainWater =>
       const AssetGenImage('assets/images/game/terrain_water.png');
@@ -248,6 +252,7 @@ class $AssetsImagesGameGen {
         terrainBeach,
         terrainElevation,
         terrainGrassland,
+        terrainGroundShadow,
         terrainWater,
         terrainWaterFoam,
         uiCursor
