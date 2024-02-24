@@ -1,7 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:flutter/foundation.dart';
-import 'package:tiny_swords/components/terrain/water.dart';
-import 'package:tiny_swords/components/ui/cursor.dart';
+import 'package:tiny_swords/components/terrains/terrains.dart';
+import 'package:tiny_swords/components/uis/cursor.dart';
 
 class TinySwordsWorld extends World with HasGameRef {
   TinySwordsWorld() : super();
