@@ -207,6 +207,10 @@ class $AssetsImagesGameGen {
   AssetGenImage get terrainGrassland =>
       const AssetGenImage('assets/images/game/terrain_grassland.png');
 
+  /// File path: assets/images/game/terrain_grassland_deco.png
+  AssetGenImage get terrainGrasslandDeco =>
+      const AssetGenImage('assets/images/game/terrain_grassland_deco.png');
+
   /// File path: assets/images/game/terrain_ground_shadow.png
   AssetGenImage get terrainGroundShadow =>
       const AssetGenImage('assets/images/game/terrain_ground_shadow.png');
@@ -276,6 +280,7 @@ class $AssetsImagesGameGen {
         terrainBridgeVertical,
         terrainElevation,
         terrainGrassland,
+        terrainGrasslandDeco,
         terrainGroundShadow,
         terrainSteps,
         terrainWater,
