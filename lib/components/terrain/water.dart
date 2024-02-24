@@ -13,6 +13,8 @@ import 'package:tiny_swords/components/deco/mushroom.dart';
 import 'package:tiny_swords/components/deco/pumpkin.dart';
 import 'package:tiny_swords/components/deco/scarecrow.dart';
 import 'package:tiny_swords/components/deco/water_rock.dart';
+import 'package:tiny_swords/components/terrain/beach.dart';
+import 'package:tiny_swords/components/terrain/water_foam.dart';
 import 'package:tiny_swords/effects/explosion.dart';
 import 'package:tiny_swords/effects/fire.dart';
 import 'package:tiny_swords/gen/assets.gen.dart';
@@ -166,6 +168,12 @@ class Water extends SpriteComponent with HasGameRef {
                   clouds[i - 1].y)));
       add(clouds[i]);
     }
+    final waterFoam = WaterFoam(
+        position: Vector2(0, clouds.first.position.y + clouds.first.size.y));
+    add(waterFoam);
+    final beach =
+        Beach(position: Vector2(waterFoam.size.x, waterFoam.position.y));
+    add(beach);
   }
 
   @override
