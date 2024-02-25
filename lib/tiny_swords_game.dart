@@ -8,7 +8,7 @@ import 'package:tiny_swords/tiny_swords_world.dart';
 class TinySwordsGame extends FlameGame<TinySwordsWorld>
     with MouseMovementDetector, PanDetector, ScrollDetector, ScaleDetector {
   static const double mapSizeWFactor = 1.8;
-  static const double mapSizeHFactor = 1.4;
+  static const double mapSizeHFactor = 1.8;
   static const double cameraZoomFactor = .1;
   static const double cameraZoomMax = 3.0;
   static const double cameraZoomMin = 1.0;

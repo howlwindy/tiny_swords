@@ -170,11 +170,6 @@ class Water extends SpriteComponent with HasGameRef {
             bridgeShadowHorizontal.position.x + bridgeShadowHorizontal.size.x,
             waterFoam.position.y));
     add(bridgeShadowVertical);
-    final steps = Steps(
-        position: Vector2(
-            bridgeShadowVertical.position.x + bridgeShadowVertical.size.x,
-            groundShadow.position.y));
-    add(steps);
     final beachDeco = Beach(
         state: BeachState.deco,
         position: Vector2(0, waterFoam.position.y + waterFoam.size.y));
@@ -340,16 +335,110 @@ class Water extends SpriteComponent with HasGameRef {
         position: Vector2(
             grasslandB.position.x + grasslandB.size.x, grasslandB.position.y));
     add(grasslandTrb);
-    final elevation =
-        Elevation(position: Vector2(0, beachBl.position.y + beachBl.size.y));
-    add(elevation);
-    final bridgeHorizontal = BridgeHorizontal(
+    final elevationTrbl = Elevation(
+        state: ElevationState.trlb,
+        position: Vector2(0, beachBl.position.y + beachBl.size.y));
+    add(elevationTrbl);
+    final elevationTbl = Elevation(
+        state: ElevationState.tbl,
+        position: Vector2(elevationTrbl.position.x + elevationTrbl.size.x,
+            elevationTrbl.position.y));
+    add(elevationTbl);
+    final elevationTr = Elevation(
+        state: ElevationState.tr,
+        position: Vector2(elevationTbl.position.x + elevationTbl.size.x,
+            elevationTrbl.position.y));
+    add(elevationTr);
+    final elevationRl = Elevation(
+        state: ElevationState.rl,
+        position: Vector2(elevationTbl.position.x + elevationTbl.size.x,
+            elevationTr.position.y + elevationTr.size.y));
+    add(elevationRl);
+    final elevationTl = Elevation(
+        state: ElevationState.tl,
+        position: Vector2(elevationTbl.position.x,
+            elevationRl.position.y + elevationRl.size.y));
+    add(elevationTl);
+    final elevationNone = Elevation(
+        state: ElevationState.none,
+        position: Vector2(elevationTl.position.x + elevationTl.size.x,
+            elevationRl.position.y + elevationRl.size.y));
+    add(elevationNone);
+    final elevationTb = Elevation(
+        state: ElevationState.tb,
+        position: Vector2(elevationNone.position.x + elevationNone.size.x,
+            elevationRl.position.y + elevationRl.size.y));
+    add(elevationTb);
+    final elevationT = Elevation(
+        state: ElevationState.t,
+        position: Vector2(elevationTb.position.x + elevationTb.size.x,
+            elevationRl.position.y + elevationRl.size.y));
+    add(elevationT);
+    final elevationTrl = Elevation(
+        state: ElevationState.trl,
+        position: Vector2(elevationT.position.x + elevationT.size.x,
+            elevationTr.position.y + elevationTr.size.y));
+    add(elevationTrl);
+    final stepsL = Elevation(
+        state: ElevationState.stepsL,
+        position: Vector2(elevationT.position.x + elevationT.size.x,
+            elevationRl.position.y + elevationRl.size.y));
+    add(stepsL);
+    final stepsNone = Elevation(
+        state: ElevationState.stepsNone,
+        position: Vector2(stepsL.position.x + stepsL.size.x,
+            elevationRl.position.y + elevationRl.size.y));
+    add(stepsNone);
+    final stepsR = Elevation(
+        state: ElevationState.stepsR,
+        position: Vector2(stepsNone.position.x + stepsNone.size.x,
+            elevationRl.position.y + elevationRl.size.y));
+    add(stepsR);
+    final elevationRb = Elevation(
+        state: ElevationState.rb,
+        position:
+            Vector2(stepsR.position.x + stepsR.size.x, stepsR.position.y));
+    add(elevationRb);
+    final elevationL = Elevation(
+        state: ElevationState.l,
+        position: Vector2(elevationTbl.position.x,
+            elevationTl.position.y + elevationTl.size.y));
+    add(elevationL);
+    final elevationR = Elevation(
+        state: ElevationState.r,
         position: Vector2(
-            elevation.position.x + elevation.size.x, elevation.position.y));
+            elevationL.position.x + elevationL.size.x, elevationL.position.y));
+    add(elevationR);
+    final elevationRbl = Elevation(
+        state: ElevationState.rbl,
+        position: Vector2(elevationT.position.x, elevationL.position.y));
+    add(elevationRbl);
+    final elevationBl = Elevation(
+        state: ElevationState.bl,
+        position: Vector2(
+            elevationL.position.x, elevationL.position.y + elevationL.size.y));
+    add(elevationBl);
+    final elevationB = Elevation(
+        state: ElevationState.b,
+        position: Vector2(elevationR.position.x, elevationBl.position.y));
+    add(elevationB);
+    final elevationTrb = Elevation(
+        state: ElevationState.trb,
+        position: Vector2(
+            elevationB.position.x + elevationB.size.x, elevationB.position.y));
+    add(elevationTrb);
+    final stepsRl = Elevation(
+        state: ElevationState.stepsRl,
+        position: Vector2(elevationTr.position.x + elevationTr.size.x,
+            elevationTr.position.y));
+    add(stepsRl);
+    final bridgeHorizontal = BridgeHorizontal(
+        position: Vector2(elevationRb.position.x + elevationRb.size.x,
+            elevationTrbl.position.y));
     add(bridgeHorizontal);
     final bridgeVertical = BridgeVertical(
         position: Vector2(bridgeHorizontal.position.x + bridgeHorizontal.size.x,
-            elevation.position.y));
+            bridgeHorizontal.position.y));
     add(bridgeVertical);
   }
 
