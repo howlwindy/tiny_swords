@@ -157,24 +157,42 @@ class Water extends SpriteComponent with HasGameRef {
     final waterFoam = WaterFoam(
         position: Vector2(0, clouds.first.position.y + clouds.first.size.y));
     add(waterFoam);
+    final groundShadow = GroundShadow(
+        position: Vector2(
+            waterFoam.position.x + waterFoam.size.x, waterFoam.position.y));
+    add(groundShadow);
+    final bridgeShadowHorizontal = BridgeShadowHorizontal(
+        position: Vector2(groundShadow.position.x + groundShadow.size.x,
+            groundShadow.position.y));
+    add(bridgeShadowHorizontal);
+    final bridgeShadowVertical = BridgeShadowVertical(
+        position: Vector2(
+            bridgeShadowHorizontal.position.x + bridgeShadowHorizontal.size.x,
+            waterFoam.position.y));
+    add(bridgeShadowVertical);
+    final steps = Steps(
+        position: Vector2(
+            bridgeShadowVertical.position.x + bridgeShadowVertical.size.x,
+            groundShadow.position.y));
+    add(steps);
     final beachDeco = Beach(
         state: BeachState.deco,
-        position: Vector2(waterFoam.size.x, waterFoam.position.y));
+        position: Vector2(0, waterFoam.position.y + waterFoam.size.y));
     add(beachDeco);
     final beachTrbl = Beach(
         state: BeachState.trlb,
-        position: Vector2(
-            beachDeco.position.x + beachDeco.size.x, waterFoam.position.y));
+        position: Vector2(beachDeco.position.x + beachDeco.size.x,
+            waterFoam.position.y + waterFoam.size.y));
     add(beachTrbl);
     final beachTbl = Beach(
         state: BeachState.tbl,
         position: Vector2(
-            beachTrbl.position.x + beachTrbl.size.x, waterFoam.position.y));
+            beachTrbl.position.x + beachTrbl.size.x, beachDeco.position.y));
     add(beachTbl);
     final beachTr = Beach(
         state: BeachState.tr,
         position: Vector2(
-            beachTbl.position.x + beachTbl.size.x, waterFoam.position.y));
+            beachTbl.position.x + beachTbl.size.x, beachDeco.position.y));
     add(beachTr);
     final beachRl = Beach(
         state: BeachState.rl,
@@ -242,22 +260,22 @@ class Water extends SpriteComponent with HasGameRef {
     final grasslandDeco = Grassland(
         state: GrasslandState.deco,
         position: Vector2(
-            beachTrl.position.x + beachTrl.size.x, waterFoam.position.y));
+            beachTrl.position.x + beachTrl.size.x, beachDeco.position.y));
     add(grasslandDeco);
     final grasslandTrbl = Grassland(
         state: GrasslandState.trlb,
         position: Vector2(grasslandDeco.position.x + grasslandDeco.size.x,
-            waterFoam.position.y));
+            beachDeco.position.y));
     add(grasslandTrbl);
     final grasslandTbl = Grassland(
         state: GrasslandState.tbl,
         position: Vector2(grasslandTrbl.position.x + grasslandTrbl.size.x,
-            waterFoam.position.y));
+            beachDeco.position.y));
     add(grasslandTbl);
     final grasslandTr = Grassland(
         state: GrasslandState.tr,
         position: Vector2(grasslandTbl.position.x + grasslandTbl.size.x,
-            waterFoam.position.y));
+            beachDeco.position.y));
     add(grasslandTr);
     final grasslandRl = Grassland(
         state: GrasslandState.rl,
@@ -322,36 +340,17 @@ class Water extends SpriteComponent with HasGameRef {
         position: Vector2(
             grasslandB.position.x + grasslandB.size.x, grasslandB.position.y));
     add(grasslandTrb);
-    final elevation = Elevation(
-        position: Vector2(
-            grasslandB.position.x + grasslandB.size.x, waterFoam.position.y));
+    final elevation =
+        Elevation(position: Vector2(0, beachBl.position.y + beachBl.size.y));
     add(elevation);
-    final groundShadow = GroundShadow(
-        position: Vector2(
-            elevation.position.x + elevation.size.x, waterFoam.position.y));
-    add(groundShadow);
-    final bridgeShadowHorizontal = BridgeShadowHorizontal(
-        position: Vector2(groundShadow.position.x + groundShadow.size.x,
-            waterFoam.position.y));
-    add(bridgeShadowHorizontal);
-    final bridgeShadowVertical = BridgeShadowVertical(
-        position: Vector2(
-            bridgeShadowHorizontal.position.x + bridgeShadowHorizontal.size.x,
-            waterFoam.position.y));
-    add(bridgeShadowVertical);
     final bridgeHorizontal = BridgeHorizontal(
         position: Vector2(
-            bridgeShadowVertical.position.x + bridgeShadowVertical.size.x,
-            waterFoam.position.y));
+            elevation.position.x + elevation.size.x, elevation.position.y));
     add(bridgeHorizontal);
     final bridgeVertical = BridgeVertical(
         position: Vector2(bridgeHorizontal.position.x + bridgeHorizontal.size.x,
-            waterFoam.position.y));
+            elevation.position.y));
     add(bridgeVertical);
-    final steps = Steps(
-        position: Vector2(bridgeVertical.position.x + bridgeVertical.size.x,
-            waterFoam.position.y));
-    add(steps);
   }
 
   @override
