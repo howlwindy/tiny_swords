@@ -16,8 +16,8 @@ class TinySwordsGame extends FlameGame<TinySwordsWorld>
   TinySwordsGame() : super(world: TinySwordsWorld());
 
   // debug
-  @override
-  bool get debugMode => !kReleaseMode;
+  // @override
+  // bool get debugMode => !kReleaseMode;
 
   @override
   Future<void> onLoad() async {
