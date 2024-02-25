@@ -161,15 +161,6 @@ class Water extends SpriteComponent with HasGameRef {
         position: Vector2(
             waterFoam.position.x + waterFoam.size.x, waterFoam.position.y));
     add(groundShadow);
-    final bridgeShadowHorizontal = BridgeShadowHorizontal(
-        position: Vector2(groundShadow.position.x + groundShadow.size.x,
-            groundShadow.position.y));
-    add(bridgeShadowHorizontal);
-    final bridgeShadowVertical = BridgeShadowVertical(
-        position: Vector2(
-            bridgeShadowHorizontal.position.x + bridgeShadowHorizontal.size.x,
-            waterFoam.position.y));
-    add(bridgeShadowVertical);
     final beachDeco = Beach(
         state: BeachState.deco,
         position: Vector2(0, waterFoam.position.y + waterFoam.size.y));
@@ -432,14 +423,69 @@ class Water extends SpriteComponent with HasGameRef {
         position: Vector2(elevationTr.position.x + elevationTr.size.x,
             elevationTr.position.y));
     add(stepsRl);
-    final bridgeHorizontal = BridgeHorizontal(
+    final bridgeT = Bridge(
+        state: BridgeState.t,
         position: Vector2(elevationRb.position.x + elevationRb.size.x,
-            elevationTrbl.position.y));
-    add(bridgeHorizontal);
-    final bridgeVertical = BridgeVertical(
-        position: Vector2(bridgeHorizontal.position.x + bridgeHorizontal.size.x,
-            bridgeHorizontal.position.y));
+            elevationTr.position.y));
+    add(bridgeT);
+    final bridgeVertical = Bridge(
+        state: BridgeState.vertical,
+        position:
+            Vector2(bridgeT.position.x, bridgeT.position.y + bridgeT.size.y));
     add(bridgeVertical);
+    final bridgeB = Bridge(
+        state: BridgeState.b,
+        position: Vector2(bridgeVertical.position.x,
+            bridgeVertical.position.y + bridgeVertical.size.y));
+    add(bridgeB);
+    final bridgeShadowVertical0 = Bridge(
+        state: BridgeState.shadowVertical,
+        position:
+            Vector2(bridgeT.position.x + bridgeT.size.x, bridgeT.position.y));
+    add(bridgeShadowVertical0);
+    final bridgeShadowVertical1 = Bridge(
+        state: BridgeState.shadowVertical,
+        position: Vector2(bridgeShadowVertical0.position.x,
+            bridgeShadowVertical0.position.y + bridgeShadowVertical0.size.y));
+    add(bridgeShadowVertical1);
+    final bridgeShadowVertical2 = Bridge(
+        state: BridgeState.shadowVertical,
+        position: Vector2(bridgeShadowVertical0.position.x,
+            bridgeShadowVertical1.position.y + bridgeShadowVertical1.size.y));
+    add(bridgeShadowVertical2);
+    final bridgeL = Bridge(
+        state: BridgeState.l,
+        position: Vector2(
+            bridgeShadowVertical0.position.x + bridgeShadowVertical0.size.x,
+            bridgeT.position.y));
+    add(bridgeL);
+    final bridgeHorizontal = Bridge(
+        state: BridgeState.horizontal,
+        position:
+            Vector2(bridgeL.position.x + bridgeL.size.x, bridgeL.position.y));
+    add(bridgeHorizontal);
+    final bridgeR = Bridge(
+        state: BridgeState.r,
+        position: Vector2(bridgeHorizontal.position.x + bridgeHorizontal.size.x,
+            bridgeL.position.y));
+    add(bridgeR);
+    final bridgeShadowHorizontal0 = Bridge(
+        state: BridgeState.shadowHorizontal,
+        position:
+            Vector2(bridgeL.position.x, bridgeL.position.y + bridgeL.size.y));
+    add(bridgeShadowHorizontal0);
+    final bridgeShadowHorizontal1 = Bridge(
+        state: BridgeState.shadowHorizontal,
+        position: Vector2(
+            bridgeShadowHorizontal0.position.x + bridgeShadowHorizontal0.size.x,
+            bridgeShadowHorizontal0.position.y));
+    add(bridgeShadowHorizontal1);
+    final bridgeShadowHorizontal2 = Bridge(
+        state: BridgeState.shadowHorizontal,
+        position: Vector2(
+            bridgeShadowHorizontal1.position.x + bridgeShadowHorizontal1.size.x,
+            bridgeShadowHorizontal1.position.y));
+    add(bridgeShadowHorizontal2);
   }
 
   @override

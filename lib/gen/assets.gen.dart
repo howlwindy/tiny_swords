@@ -179,89 +179,9 @@ class $AssetsImagesGameGen {
   AssetGenImage get effectFire =>
       const AssetGenImage('assets/images/game/effect_fire.png');
 
-  /// File path: assets/images/game/terrain_beach_b.png
-  AssetGenImage get terrainBeachB =>
-      const AssetGenImage('assets/images/game/terrain_beach_b.png');
-
-  /// File path: assets/images/game/terrain_beach_bl.png
-  AssetGenImage get terrainBeachBl =>
-      const AssetGenImage('assets/images/game/terrain_beach_bl.png');
-
-  /// File path: assets/images/game/terrain_beach_deco.png
-  AssetGenImage get terrainBeachDeco =>
-      const AssetGenImage('assets/images/game/terrain_beach_deco.png');
-
-  /// File path: assets/images/game/terrain_beach_l.png
-  AssetGenImage get terrainBeachL =>
-      const AssetGenImage('assets/images/game/terrain_beach_l.png');
-
-  /// File path: assets/images/game/terrain_beach_none.png
-  AssetGenImage get terrainBeachNone =>
-      const AssetGenImage('assets/images/game/terrain_beach_none.png');
-
-  /// File path: assets/images/game/terrain_beach_r.png
-  AssetGenImage get terrainBeachR =>
-      const AssetGenImage('assets/images/game/terrain_beach_r.png');
-
-  /// File path: assets/images/game/terrain_beach_rb.png
-  AssetGenImage get terrainBeachRb =>
-      const AssetGenImage('assets/images/game/terrain_beach_rb.png');
-
-  /// File path: assets/images/game/terrain_beach_rbl.png
-  AssetGenImage get terrainBeachRbl =>
-      const AssetGenImage('assets/images/game/terrain_beach_rbl.png');
-
-  /// File path: assets/images/game/terrain_beach_rl.png
-  AssetGenImage get terrainBeachRl =>
-      const AssetGenImage('assets/images/game/terrain_beach_rl.png');
-
-  /// File path: assets/images/game/terrain_beach_t.png
-  AssetGenImage get terrainBeachT =>
-      const AssetGenImage('assets/images/game/terrain_beach_t.png');
-
-  /// File path: assets/images/game/terrain_beach_tb.png
-  AssetGenImage get terrainBeachTb =>
-      const AssetGenImage('assets/images/game/terrain_beach_tb.png');
-
-  /// File path: assets/images/game/terrain_beach_tbl.png
-  AssetGenImage get terrainBeachTbl =>
-      const AssetGenImage('assets/images/game/terrain_beach_tbl.png');
-
-  /// File path: assets/images/game/terrain_beach_tl.png
-  AssetGenImage get terrainBeachTl =>
-      const AssetGenImage('assets/images/game/terrain_beach_tl.png');
-
-  /// File path: assets/images/game/terrain_beach_tr.png
-  AssetGenImage get terrainBeachTr =>
-      const AssetGenImage('assets/images/game/terrain_beach_tr.png');
-
-  /// File path: assets/images/game/terrain_beach_trb.png
-  AssetGenImage get terrainBeachTrb =>
-      const AssetGenImage('assets/images/game/terrain_beach_trb.png');
-
-  /// File path: assets/images/game/terrain_beach_trbl.png
-  AssetGenImage get terrainBeachTrbl =>
-      const AssetGenImage('assets/images/game/terrain_beach_trbl.png');
-
-  /// File path: assets/images/game/terrain_beach_trl.png
-  AssetGenImage get terrainBeachTrl =>
-      const AssetGenImage('assets/images/game/terrain_beach_trl.png');
-
-  /// File path: assets/images/game/terrain_bridge_horizontal.png
-  AssetGenImage get terrainBridgeHorizontal =>
-      const AssetGenImage('assets/images/game/terrain_bridge_horizontal.png');
-
-  /// File path: assets/images/game/terrain_bridge_shadow_horizontal.png
-  AssetGenImage get terrainBridgeShadowHorizontal => const AssetGenImage(
-      'assets/images/game/terrain_bridge_shadow_horizontal.png');
-
-  /// File path: assets/images/game/terrain_bridge_shadow_vertical.png
-  AssetGenImage get terrainBridgeShadowVertical => const AssetGenImage(
-      'assets/images/game/terrain_bridge_shadow_vertical.png');
-
-  /// File path: assets/images/game/terrain_bridge_vertical.png
-  AssetGenImage get terrainBridgeVertical =>
-      const AssetGenImage('assets/images/game/terrain_bridge_vertical.png');
+  /// File path: assets/images/game/terrain_bridge.png
+  AssetGenImage get terrainBridge =>
+      const AssetGenImage('assets/images/game/terrain_bridge.png');
 
   /// File path: assets/images/game/terrain_elevation.png
   AssetGenImage get terrainElevation =>
@@ -271,21 +191,9 @@ class $AssetsImagesGameGen {
   AssetGenImage get terrainFlat =>
       const AssetGenImage('assets/images/game/terrain_flat.png');
 
-  /// File path: assets/images/game/terrain_grassland.png
-  AssetGenImage get terrainGrassland =>
-      const AssetGenImage('assets/images/game/terrain_grassland.png');
-
-  /// File path: assets/images/game/terrain_grassland_deco.png
-  AssetGenImage get terrainGrasslandDeco =>
-      const AssetGenImage('assets/images/game/terrain_grassland_deco.png');
-
   /// File path: assets/images/game/terrain_ground_shadow.png
   AssetGenImage get terrainGroundShadow =>
       const AssetGenImage('assets/images/game/terrain_ground_shadow.png');
-
-  /// File path: assets/images/game/terrain_steps.png
-  AssetGenImage get terrainSteps =>
-      const AssetGenImage('assets/images/game/terrain_steps.png');
 
   /// File path: assets/images/game/terrain_water.png
   AssetGenImage get terrainWater =>
@@ -341,33 +249,10 @@ class $AssetsImagesGameGen {
         decoWaterRock3,
         effectExplosion,
         effectFire,
-        terrainBeachB,
-        terrainBeachBl,
-        terrainBeachDeco,
-        terrainBeachL,
-        terrainBeachNone,
-        terrainBeachR,
-        terrainBeachRb,
-        terrainBeachRbl,
-        terrainBeachRl,
-        terrainBeachT,
-        terrainBeachTb,
-        terrainBeachTbl,
-        terrainBeachTl,
-        terrainBeachTr,
-        terrainBeachTrb,
-        terrainBeachTrbl,
-        terrainBeachTrl,
-        terrainBridgeHorizontal,
-        terrainBridgeShadowHorizontal,
-        terrainBridgeShadowVertical,
-        terrainBridgeVertical,
+        terrainBridge,
         terrainElevation,
         terrainFlat,
-        terrainGrassland,
-        terrainGrasslandDeco,
         terrainGroundShadow,
-        terrainSteps,
         terrainWater,
         terrainWaterFoam,
         uiCursor
