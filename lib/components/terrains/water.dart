@@ -239,13 +239,92 @@ class Water extends SpriteComponent with HasGameRef {
         position:
             Vector2(beachB.position.x + beachB.size.x, beachB.position.y));
     add(beachTrb);
-    final grassland = Grassland(
+    final grasslandDeco = Grassland(
+        state: GrasslandState.deco,
         position: Vector2(
             beachTrl.position.x + beachTrl.size.x, waterFoam.position.y));
-    add(grassland);
+    add(grasslandDeco);
+    final grasslandTrbl = Grassland(
+        state: GrasslandState.trlb,
+        position: Vector2(grasslandDeco.position.x + grasslandDeco.size.x,
+            waterFoam.position.y));
+    add(grasslandTrbl);
+    final grasslandTbl = Grassland(
+        state: GrasslandState.tbl,
+        position: Vector2(grasslandTrbl.position.x + grasslandTrbl.size.x,
+            waterFoam.position.y));
+    add(grasslandTbl);
+    final grasslandTr = Grassland(
+        state: GrasslandState.tr,
+        position: Vector2(grasslandTbl.position.x + grasslandTbl.size.x,
+            waterFoam.position.y));
+    add(grasslandTr);
+    final grasslandRl = Grassland(
+        state: GrasslandState.rl,
+        position: Vector2(grasslandTbl.position.x + grasslandTbl.size.x,
+            grasslandTr.position.y + grasslandTr.size.y));
+    add(grasslandRl);
+    final grasslandTl = Grassland(
+        state: GrasslandState.tl,
+        position: Vector2(grasslandTbl.position.x,
+            grasslandRl.position.y + grasslandRl.size.y));
+    add(grasslandTl);
+    final grasslandNone = Grassland(
+        state: GrasslandState.none,
+        position: Vector2(grasslandTl.position.x + grasslandTl.size.x,
+            grasslandRl.position.y + grasslandRl.size.y));
+    add(grasslandNone);
+    final grasslandTb = Grassland(
+        state: GrasslandState.tb,
+        position: Vector2(grasslandNone.position.x + grasslandNone.size.x,
+            grasslandRl.position.y + grasslandRl.size.y));
+    add(grasslandTb);
+    final grasslandT = Grassland(
+        state: GrasslandState.t,
+        position: Vector2(grasslandTb.position.x + grasslandTb.size.x,
+            grasslandRl.position.y + grasslandRl.size.y));
+    add(grasslandT);
+    final grasslandTrl = Grassland(
+        state: GrasslandState.trl,
+        position: Vector2(grasslandT.position.x + grasslandT.size.x,
+            grasslandTr.position.y + grasslandTr.size.y));
+    add(grasslandTrl);
+    final grasslandRb = Grassland(
+        state: GrasslandState.rb,
+        position: Vector2(grasslandT.position.x + grasslandT.size.x,
+            grasslandRl.position.y + grasslandRl.size.y));
+    add(grasslandRb);
+    final grasslandL = Grassland(
+        state: GrasslandState.l,
+        position: Vector2(grasslandTbl.position.x,
+            grasslandTl.position.y + grasslandTl.size.y));
+    add(grasslandL);
+    final grasslandR = Grassland(
+        state: GrasslandState.r,
+        position: Vector2(
+            grasslandL.position.x + grasslandL.size.x, grasslandL.position.y));
+    add(grasslandR);
+    final grasslandRbl = Grassland(
+        state: GrasslandState.rbl,
+        position: Vector2(grasslandT.position.x, grasslandL.position.y));
+    add(grasslandRbl);
+    final grasslandBl = Grassland(
+        state: GrasslandState.bl,
+        position: Vector2(
+            grasslandL.position.x, grasslandL.position.y + grasslandL.size.y));
+    add(grasslandBl);
+    final grasslandB = Grassland(
+        state: GrasslandState.b,
+        position: Vector2(grasslandR.position.x, grasslandBl.position.y));
+    add(grasslandB);
+    final grasslandTrb = Grassland(
+        state: GrasslandState.trb,
+        position: Vector2(
+            grasslandB.position.x + grasslandB.size.x, grasslandB.position.y));
+    add(grasslandTrb);
     final elevation = Elevation(
         position: Vector2(
-            grassland.position.x + grassland.size.x, waterFoam.position.y));
+            grasslandB.position.x + grasslandB.size.x, waterFoam.position.y));
     add(elevation);
     final groundShadow = GroundShadow(
         position: Vector2(
@@ -273,10 +352,6 @@ class Water extends SpriteComponent with HasGameRef {
         position: Vector2(bridgeVertical.position.x + bridgeVertical.size.x,
             waterFoam.position.y));
     add(steps);
-    final grasslandDeco = GrasslandDeco(
-        position:
-            Vector2(steps.position.x + steps.size.x, waterFoam.position.y));
-    add(grasslandDeco);
   }
 
   @override
