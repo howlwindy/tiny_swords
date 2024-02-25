@@ -157,9 +157,14 @@ class Water extends SpriteComponent with HasGameRef {
     final waterFoam = WaterFoam(
         position: Vector2(0, clouds.first.position.y + clouds.first.size.y));
     add(waterFoam);
+    final beachDeco = Beach(
+        state: BeachState.deco,
+        position: Vector2(waterFoam.size.x, waterFoam.position.y));
+    add(beachDeco);
     final beachTrbl = Beach(
         state: BeachState.trlb,
-        position: Vector2(waterFoam.size.x, waterFoam.position.y));
+        position: Vector2(
+            beachDeco.position.x + beachDeco.size.x, waterFoam.position.y));
     add(beachTrbl);
     final beachTbl = Beach(
         state: BeachState.tbl,
@@ -272,10 +277,6 @@ class Water extends SpriteComponent with HasGameRef {
         position:
             Vector2(steps.position.x + steps.size.x, waterFoam.position.y));
     add(grasslandDeco);
-    final beachDeco = BeachDeco(
-        position: Vector2(grasslandDeco.position.x + grasslandDeco.size.x,
-            waterFoam.position.y));
-    add(beachDeco);
   }
 
   @override

@@ -1,4 +1,3 @@
-export 'beach_deco.dart';
 export 'beach.dart';
 export 'bridge_horizontal.dart';
 export 'bridge_shadow_horizontal.dart';

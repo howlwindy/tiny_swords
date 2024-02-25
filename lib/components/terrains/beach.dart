@@ -18,6 +18,7 @@ enum BeachState {
   b,
   l,
   none,
+  deco
 }
 
 class Beach extends SpriteGroupComponent<BeachState> with HasGameRef {
@@ -26,39 +27,44 @@ class Beach extends SpriteGroupComponent<BeachState> with HasGameRef {
   Beach({this.state = BeachState.none, required super.position}) : super();
   @override
   void onLoad() {
+    const size = 64.0;
+    final srcSize = Vector2.all(size);
+    final image = game.images.fromCache(Assets.images.game.terrainFlat.keyName);
     sprites = {
-      BeachState.trlb: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachTrbl.keyName)),
-      BeachState.trb: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachTrb.keyName)),
-      BeachState.trl: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachTrl.keyName)),
-      BeachState.tbl: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachTbl.keyName)),
-      BeachState.rbl: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachRbl.keyName)),
-      BeachState.tr: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachTr.keyName)),
-      BeachState.rb: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachRb.keyName)),
-      BeachState.bl: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachBl.keyName)),
-      BeachState.tl: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachTl.keyName)),
-      BeachState.tb: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachTb.keyName)),
-      BeachState.rl: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachRl.keyName)),
-      BeachState.t: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachT.keyName)),
-      BeachState.r: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachR.keyName)),
-      BeachState.b: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachB.keyName)),
-      BeachState.l: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachL.keyName)),
-      BeachState.none: Sprite(
-          game.images.fromCache(Assets.images.game.terrainBeachNone.keyName)),
+      BeachState.trlb: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 8, size * 3)),
+      BeachState.trb: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 7, size * 3)),
+      BeachState.trl:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 8, 0)),
+      BeachState.tbl: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 5, size * 3)),
+      BeachState.rbl: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 8, size * 2)),
+      BeachState.tr:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 7, 0)),
+      BeachState.rb: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 7, size * 2)),
+      BeachState.bl: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 5, size * 2)),
+      BeachState.tl:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 5, 0)),
+      BeachState.tb: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 6, size * 3)),
+      BeachState.rl:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 8, size)),
+      BeachState.t:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 6, 0)),
+      BeachState.r:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 7, size)),
+      BeachState.b: Sprite(image,
+          srcSize: srcSize, srcPosition: Vector2(size * 6, size * 2)),
+      BeachState.l:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 5, size)),
+      BeachState.none:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 6, size)),
+      BeachState.deco:
+          Sprite(image, srcSize: srcSize, srcPosition: Vector2(size * 9, 0)),
     };
 
     current = state;
